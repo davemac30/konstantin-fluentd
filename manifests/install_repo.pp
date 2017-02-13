@@ -1,5 +1,5 @@
 class fluentd::install_repo inherits fluentd {
-  case $facts['osfamily'] {
+  case $::osfamily {
     'redhat': {
       yumrepo { $fluentd::repo_name:
         descr    => $fluentd::repo_desc,

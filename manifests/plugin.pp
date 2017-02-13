@@ -1,8 +1,8 @@
 define fluentd::plugin(
-  String $plugin_ensure = present,
-  Stdlib::Httpurl $plugin_source = 'https://rubygems.org',
-  Array[Variant[String, Hash]] $plugin_install_options = [],
-  String $plugin_provider = tdagent,
+  $plugin_ensure = present,
+  $plugin_source = 'https://rubygems.org',
+  $plugin_install_options = [],
+  $plugin_provider = tdagent,
 ) {
   package { $title:
     ensure          => $plugin_ensure,
